@@ -2,15 +2,15 @@
 ** EPITECH PROJECT, 2024
 ** shared-arcade
 ** File description:
-** IDisplay
+** IRenderer
 */
 
 #pragma once
 
-class IDisplay {
+class IRenderer {
   public:
-    IDisplay();
-    ~IDisplay();
+    IRenderer();
+    ~IRenderer();
 
   protected:
   private:
