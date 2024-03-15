@@ -8,6 +8,7 @@
 #pragma once
 
 #include <string>
+#include "Arcade/Arcade.hpp"
 
 namespace ArcadeShared::Graphics
 {   
@@ -51,7 +52,6 @@ class IText {
         virtual std::size_t getString() const = 0;
 
     protected:
-        std::size_t _positionX;
-        std::size_t _positionY;
-        std::string _string;
+        ArcadeShared::Vector2i  _position;
+        std::string             _string;
 };

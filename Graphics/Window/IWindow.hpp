@@ -68,16 +68,6 @@ class ArcadeShared::Graphics::IWindow {
         virtual std::size_t getFps() const = 0;
 
         /**
-         * @brief Create the window
-         */
-        virtual void createWindow() = 0;
-
-        /**
-         * @brief Destroy the Window
-         */
-        virtual void destroyWindow() = 0;
-
-        /**
          * @brief Destroy the Window
          */
         virtual void clearWindow() = 0;
@@ -87,10 +77,22 @@ class ArcadeShared::Graphics::IWindow {
          */
         virtual void displayWindow() = 0;
 
+        /**
+         * @brief Get fullscreen mode of the window
+         * @return Fullscreen state
+         */
+        virtual bool getFullScreenState() const = 0;
+
+        /**
+         * @brief Get the open state of the window
+         * @return Open state
+         */
+        virtual bool isOpen() const = 0;
+
+
     protected:
         std::size_t _width;
         std::size_t _height;
         std::size_t _fps;
         std::string _title;
-        bool        _fullScreen;
 };
