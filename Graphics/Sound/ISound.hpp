@@ -11,11 +11,9 @@
 
 namespace ArcadeShared::Graphics
 {
-    template <typename T>
     class ISound;
 }
 
-template <typename T>
 class ArcadeShared::Graphics::ISound {
     public:
 
@@ -32,28 +30,28 @@ class ArcadeShared::Graphics::ISound {
          * @brief Load sound from file
          * @param filename Filename of the sound
          */
-        virtual void loadSoundFromFile(const std::string &filename) const = 0;
+        virtual void loadSoundFromFile(const std::string &filename) = 0;
 
         /**
          * @brief Play the sound
          */
-        virtual void play() const = 0;
+        virtual void play() = 0;
 
         /**
          * @brief Stop the sound
          */
-        virtual void stop() const = 0;
+        virtual void stop() = 0;
 
         /**
          * @brief Pause the sound
          */
-        virtual void pause() const = 0;
+        virtual void pause() = 0;
 
         /**
          * @brief Make the sound loop
          * @param loop Loop the sound
          */
-        virtual void loop(bool loop) const = 0;
+        virtual void loop(bool loop) = 0;
 
         /**
          * @brief Get if the sound is looping
@@ -61,11 +59,14 @@ class ArcadeShared::Graphics::ISound {
         */
         virtual bool getLoop() const = 0;
 
+        /**
+         * @brief Get status of sound
+         * @return Status
+        */
         virtual ArcadeShared::Graphics::ISound::Status getSoundStatus() const = 0;
 
 
     protected:
-        T                                              _sound;
-        ArcadeShared::Graphics::ISound::Status   _soundStatus;
+        ArcadeShared::Graphics::ISound::Status          _soundStatus;
         bool                                            _loop;
 };

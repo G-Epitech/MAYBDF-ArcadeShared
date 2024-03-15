@@ -38,10 +38,10 @@ class ArcadeShared::Graphics::IWindow {
         virtual void setTitle(const std::string &title) = 0;
 
         /**
-         * @brief Set the Full Screen object
-         * @param fullScreen Statue of window
+         * @brief Set the frame rate of renderer
+         * @param fps Renderer frames rate
          */
-        virtual void setFullScreen(bool fullScreen) = 0;
+        virtual void setFps(std::size_t fps) = 0;
 
         /**
          * @brief Get the width of the window
@@ -62,20 +62,35 @@ class ArcadeShared::Graphics::IWindow {
         virtual std::string getTitle() const = 0;
 
         /**
-         * @brief Get fullscreen mode of the window
-         * @return Fullscreen state
+         * @brief Get the fps of the window
+         * @return Fps of the window
          */
-        virtual bool getFullScreenState() const = 0;
+        virtual std::size_t getFps() const = 0;
 
         /**
-         * @brief Get the open state of the window
-         * @return Open state
+         * @brief Create the window
          */
-        virtual bool isOpen() const = 0;
+        virtual void createWindow() = 0;
+
+        /**
+         * @brief Destroy the Window
+         */
+        virtual void destroyWindow() = 0;
+
+        /**
+         * @brief Destroy the Window
+         */
+        virtual void clearWindow() = 0;
+
+        /**
+         * @brief Destroy the Window
+         */
+        virtual void displayWindow() = 0;
 
     protected:
         std::size_t _width;
         std::size_t _height;
+        std::size_t _fps;
         std::string _title;
         bool        _fullScreen;
 };
