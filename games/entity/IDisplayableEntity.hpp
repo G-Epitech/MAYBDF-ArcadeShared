@@ -38,4 +38,26 @@ class shared::games::entity::IDisplayableEntity : public IEntity
 		 *
 		 */
 		TextureProps textureProps;
+
+		/**
+		 * @brief On click event handler for the entity
+		 * @param ctx Context of the game
+		 */
+		// TODO: Change void *ctx to a more specific type like GameContext
+		virtual void onClick(void *ctx) = 0;
+
+		/**
+		 * @brief On hover event handler for the entity
+		 * @param ctx Context of the game
+		 */
+		// TODO: Change void *ctx to a more specific type like GameContext
+		virtual void onHover(void *ctx) = 0;
+
+		/**
+		 * @brief On collide event handler for the entity
+		 * @param ctx Context of the game
+		 * @param target Target entity
+		 */
+		// TODO: Change void *ctx to a more specific type like GameContext
+		virtual void onCollide(void *ctx, const IDisplayableEntity &target) = 0;
 };
