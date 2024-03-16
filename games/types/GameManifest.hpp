@@ -9,10 +9,6 @@
 #include <string>
 #include <vector>
 
-#include "../../types/types.hpp"
-
-using namespace shared::types;
-
 namespace shared::games
 {
   typedef struct GameManifest;
@@ -31,7 +27,6 @@ struct shared::games::GameManifest
 {
   const std::string name;            // Name of the game
   const std::string description;     // Description of the game
-  const Vector2u size;               // Size of the game (tiles)
   const std::string version;         // Version of the game
   const std::vector<Author> authors; // Authors
 };

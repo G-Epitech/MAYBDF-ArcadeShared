@@ -9,6 +9,7 @@
 
 #include "../../types/Vector.hpp"
 #include "../types/TextureProps.hpp"
+#include "../game/IGame.hpp"
 #include "IEntity.hpp"
 
 namespace shared::games::entity
@@ -43,21 +44,18 @@ public:
 	 * @brief On click event handler for the entity
 	 * @param ctx Context of the game
 	 */
-	// TODO: Change void *ctx to a more specific type like GameContext
-	virtual void onClick(void *ctx) = 0;
+	virtual void onClick(game::UniqueGame &ctx) = 0;
 
 	/**
 	 * @brief On hover event handler for the entity
 	 * @param ctx Context of the game
 	 */
-	// TODO: Change void *ctx to a more specific type like GameContext
-	virtual void onHover(void *ctx) = 0;
+	virtual void onHover(game::UniqueGame &ctx) = 0;
 
 	/**
 	 * @brief On collide event handler for the entity
 	 * @param ctx Context of the game
 	 * @param target Target entity
 	 */
-	// TODO: Change void *ctx to a more specific type like GameContext
-	virtual void onCollide(void *ctx, const IDisplayableEntity &target) = 0;
+	virtual void onCollide(game::UniqueGame &ctx, const IDisplayableEntity &target) = 0;
 };

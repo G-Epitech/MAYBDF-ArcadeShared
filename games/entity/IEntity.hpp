@@ -8,13 +8,26 @@
 #pragma once
 
 #include "../../types/UUId.hpp"
-#include "../games.hpp"
 #include "../types/SoundProps.hpp"
 #include "../types/KeyData.hpp"
 
-namespace shared::games::entity
+namespace shared::games
 {
-  class IEntity;
+  namespace game
+  {
+    class IGame;
+
+    typedef std::unique_ptr<IGame> UniqueGame;
+  }
+
+  namespace entity
+  {
+    class IEntity;
+
+    typedef std::map<UUId, std::unique_ptr<IEntity>> EntitiesMap;
+    typedef std::unique_ptr<IEntity> UniqueEntity;
+  }
+
 }
 
 class shared::games::entity::IEntity
@@ -39,6 +52,5 @@ public:
    * @param ctx Context of the game
    * @param keyData Key data of key pressed
    */
-  // TODO: Change void *ctx to a more specific type like GameContext
-  virtual void onKeyPress(void *ctx, events::KeyData keyData) = 0;
+  virtual void onKeyPress(game::UniqueGame &ctx, events::KeyData keyData) = 0;
 };
