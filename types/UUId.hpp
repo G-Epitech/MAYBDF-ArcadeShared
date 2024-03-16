@@ -7,8 +7,7 @@
 
 #pragma once
 
-namespace shared {
-    namespace types {
-        typedef unsigned long long UUId;
-    }
+namespace shared::types
+{
+  typedef unsigned long long UUId;
 }
