@@ -7,7 +7,8 @@
 
 #pragma once
 
-namespace shared::types {
+namespace shared::types
+{
   template <typename T>
   struct Vector;
 
@@ -17,9 +18,10 @@ namespace shared::types {
 }
 
 template <typename T>
-struct shared::types::Vector {
-    Vector(T x, T y) : x(x), y(y){};
+struct shared::types::Vector
+{
+  Vector(T x, T y) : x(x), y(y){};
 
-    T x;
-    T y;
+  T x;
+  T y;
 };

@@ -16,17 +16,20 @@
 
 using namespace shared::types;
 
-namespace shared::games {
+namespace shared::games
+{
   typedef struct TextureProps;
   typedef struct TextureSources;
 }
 
-struct shared::games::TextureSources {
+struct shared::games::TextureSources
+{
   const std::string ascii; // ASCII image representation path
-  const std::string bin; // Binary image path
+  const std::string bin;   // Binary image path
 };
 
-struct shared::games::TextureProps {
+struct shared::games::TextureProps
+{
   TextureSources sources; // Sources of textures
-  Vector2u origin; // Origin of the texture
+  Vector2u origin;        // Origin of the texture
 };

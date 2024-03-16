@@ -7,8 +7,11 @@
 
 #pragma once
 
-namespace shared {
-    namespace types {}
+namespace shared
+{
+    namespace types
+    {
+    }
 }
 
 #include "UUId.hpp"

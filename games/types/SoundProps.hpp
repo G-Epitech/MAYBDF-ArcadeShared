@@ -15,21 +15,24 @@
 
 using namespace shared::types;
 
-namespace shared::games {
+namespace shared::games
+{
     typedef struct SoundProps;
     typedef enum SoundState;
     typedef unsigned char SoundVolume;
     typedef std::map<UUId, std::unique_ptr<SoundProps>> SoundsPropsMap;
 }
 
-enum shared::games::SoundState {
+enum shared::games::SoundState
+{
     PLAY,
     PAUSE,
     STOP
 };
 
-struct shared::games::SoundProps {
+struct shared::games::SoundProps
+{
     const std::string path; // Sound file path
-    SoundState state; //Current sound state
-    SoundVolume volume; //Sound volume
+    SoundState state;       // Current sound state
+    SoundVolume volume;     // Sound volume
 };

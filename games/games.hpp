@@ -9,5 +9,7 @@
 
 namespace shared
 {
-    namespace games {}
+    namespace games
+    {
+    }
 }
