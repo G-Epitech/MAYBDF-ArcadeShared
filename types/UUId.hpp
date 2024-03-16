@@ -2,13 +2,13 @@
 ** EPITECH PROJECT, 2024
 ** arcade-shared
 ** File description:
-** UUID
+** UUId
 */
 
 #pragma once
 
 namespace shared {
     namespace types {
-        typedef unsigned long long UUID;
+        typedef unsigned long long UUId;
     }
 }
