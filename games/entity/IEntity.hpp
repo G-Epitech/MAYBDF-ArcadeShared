@@ -24,10 +24,8 @@ namespace shared::games
   {
     class IEntity;
 
-    typedef std::map<UUId, std::unique_ptr<IEntity>> EntitiesMap;
-    typedef std::unique_ptr<IEntity> UniqueEntity;
+    typedef std::map<UUId, std::shared_ptr<IEntity>> EntitiesMap;
   }
-
 }
 
 class shared::games::entity::IEntity

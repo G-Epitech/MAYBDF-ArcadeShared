@@ -51,6 +51,20 @@ public:
    */
   const Vector2u size;
 
+  /**
+   * @brief Get map of entities
+   *
+   */
+  virtual const entity::EntitiesMap &getEntities(void) const = 0;
+
+  /**
+   * @brief Get entity by id
+   *
+   * @param id Id of the entity
+   * @return The specific entity
+   */
+  virtual std::shared_ptr<entity::IEntity> getEntityById(UUId id) const = 0;
+
 protected:
   /**
    * @brief Register entity to the game
@@ -59,7 +73,7 @@ protected:
    * @param entity The unique ptr of the entity
    * @return New unique ID of the entity
    */
-  virtual UUId _registerEntity(entity::UniqueEntity &entity) = 0;
+  virtual UUId _registerEntity(std::shared_ptr<entity::IEntity> entity) = 0;
 
   /**
    * @brief Map of entities
