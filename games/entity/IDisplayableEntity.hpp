@@ -15,6 +15,8 @@
 namespace shared::games::entity
 {
 	class IDisplayableEntity;
+
+	typedef std::unique_ptr<IDisplayableEntity> UnqiueDisplayableEntity;
 }
 
 class shared::games::entity::IDisplayableEntity : public IEntity
@@ -57,5 +59,5 @@ public:
 	 * @param ctx Context of the game
 	 * @param target Target entity
 	 */
-	virtual void onCollide(game::UniqueGame &ctx, const IDisplayableEntity &target) = 0;
+	virtual void onCollide(game::UniqueGame &ctx, UnqiueDisplayableEntity &target) = 0;
 };
