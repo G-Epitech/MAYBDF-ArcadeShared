@@ -29,7 +29,7 @@ enum shared::games::SoundState {
 };
 
 struct shared::games::SoundProps {
-    const std::string path;
-    SoundState state;
-    SoundVolume volume;
+    const std::string path; // Sound file path
+    SoundState state; //Current sound state
+    SoundVolume volume; //Sound volume
 };

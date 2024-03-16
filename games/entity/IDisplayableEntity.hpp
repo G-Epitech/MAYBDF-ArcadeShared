@@ -8,6 +8,7 @@
 #pragma once
 
 #include "../../types/Vector.hpp"
+#include "../types/TextureProps.hpp"
 #include "IEntity.hpp"
 
 namespace shared::games::entity
@@ -31,4 +32,10 @@ class shared::games::entity::IDisplayableEntity : public IEntity
 		 *
 		 */
 		Vector2i position;
+
+		/**
+		 * @brief Texture properties
+		 *
+		 */
+		TextureProps textureProps;
 };
