@@ -7,10 +7,10 @@
 
 #pragma once
 
+#include "IEntity.hpp"
+#include "../game/IGame.hpp"
 #include "../../types/Vector.hpp"
 #include "../types/TextureProps.hpp"
-#include "../game/IGame.hpp"
-#include "IEntity.hpp"
 
 namespace shared::games::entity
 {
@@ -29,6 +29,12 @@ public:
 	 *
 	 */
 	Vector2u size;
+
+	/**
+	 * @brief Z index that is usefull for display prioroty
+	 *
+	 */
+	unsigned int zIndex;
 
 	/**
 	 * @brief Entity position
