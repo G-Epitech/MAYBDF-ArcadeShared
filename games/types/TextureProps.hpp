@@ -20,6 +20,7 @@ namespace shared::games
   {
     const std::string ascii; // ASCII image representation path
     const std::string bin;   // Binary image path
+    Vector2f binTileSize;    // Size of the binary tile
   } TextureProps;
 
   typedef struct
