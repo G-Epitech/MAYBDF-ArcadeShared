@@ -8,8 +8,8 @@
 #pragma once
 
 #include "../../types/UUId.hpp"
-#include "../types/SoundProps.hpp"
 #include "../types/KeyData.hpp"
+#include "../types/SoundProps.hpp"
 
 namespace shared::games
 {

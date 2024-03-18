@@ -8,9 +8,8 @@
 #pragma once
 
 #include <memory>
-
-#include "../types/GameManifest.hpp"
 #include "../entity/IEntity.hpp"
+#include "../types/GameManifest.hpp"
 
 using namespace shared::types;
 

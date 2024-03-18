@@ -10,7 +10,6 @@
 #include <map>
 #include <memory>
 #include <string>
-
 #include "../../types/types.hpp"
 
 using namespace shared::types;
