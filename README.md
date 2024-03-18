@@ -1,4 +1,4 @@
-# 📦 Shared Arcade Library
+# 📦 Arcade Shared Library
 Shared library for Arcade project
 
 ## Description
