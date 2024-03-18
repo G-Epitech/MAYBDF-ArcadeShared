@@ -18,6 +18,7 @@ namespace shared::games::game
   class IGame;
 
   typedef std::unique_ptr<IGame> UniqueGame;
+  typedef unsigned long DeltaTime;
 }
 
 class shared::games::game::IGame
@@ -28,8 +29,9 @@ public:
   /**
    * @brief Compute the game each tick of the program
    *
+   * @param dt Time since last tick (Time in `milliseconds`)
    */
-  virtual void compute(void) = 0;
+  virtual void compute(DeltaTime dt) = 0;
 
   /**
    * @brief Manifest with informations of the game
