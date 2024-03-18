@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "types/SoundVolume.hpp"
+#include "types/Sound.hpp"
 
 namespace shared::graphics
 {
@@ -19,22 +19,19 @@ class shared::graphics::ISound {
     virtual ~ISound() = default;
 
     /**
-     * @brief Play the sound
+     * @brief Get the state of the sound
      *
+     * @param state State of sound playing
+     * @return SoundState
      */
-    virtual void play(void) = 0;
+    virtual void setState(SoundState state) = 0;
 
     /**
-     * @brief Pause the sound
+     * @brief Get the state of the sound
      *
+     * @return Current state of the sound
      */
-    virtual void pause(void) = 0;
-
-    /**
-     * @brief Stop the sound
-     *
-     */
-    virtual void stop(void) = 0;
+    virtual SoundState getState() const = 0;
 
     /**
      * @brief Set the volume of the sound
@@ -42,4 +39,11 @@ class shared::graphics::ISound {
      * @param volume Volume of the sound
      */
     virtual void setVolume(SoundVolume volume) = 0;
+
+    /**
+     * @brief Get the volume of the sound
+     *
+     * @return Volume of the sound
+     */
+    virtual SoundVolume getVolume() const = 0;
 };

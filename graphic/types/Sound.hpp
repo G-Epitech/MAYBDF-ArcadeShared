@@ -10,4 +10,10 @@
 namespace shared::graphics
 {
   typedef unsigned char SoundVolume;
+  typedef enum
+  {
+    PLAY,
+    PAUSE,
+    STOP
+  } SoundState;
 }
