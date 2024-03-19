@@ -16,6 +16,12 @@ using namespace shared::types;
 namespace shared::rendering
 {
   class IWindow;
+
+  typedef enum
+  {
+    WINDOWED,
+    FULLSCREEN
+  } WindowMode;
 }
 
 class shared::rendering::IWindow {

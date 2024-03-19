@@ -7,14 +7,20 @@
 
 #pragma once
 
-#include "types/Sound.hpp"
-
-namespace shared::rendering
+namespace shared::rendering::sound
 {
   class ISound;
+
+  typedef unsigned char SoundVolume;
+  typedef enum
+  {
+    PLAY,
+    PAUSE,
+    STOP
+  } SoundState;
 }
 
-class shared::rendering::ISound {
+class shared::rendering::sound::ISound {
   public:
     virtual ~ISound() = default;
 
