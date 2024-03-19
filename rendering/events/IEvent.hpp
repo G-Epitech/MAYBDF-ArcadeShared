@@ -9,14 +9,17 @@
 
 #include "../types/Events.hpp"
 
-namespace shared::graphics
+namespace shared::rendering::events
 {
   class IEvent;
 }
 
-class shared::graphics::IEvent {
+class shared::rendering::events::IEvent {
   public:
     virtual ~IEvent() = default;
 
+    /**
+     * @brief Event type
+     */
     const events::EventType type;
 };

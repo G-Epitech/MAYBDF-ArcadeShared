@@ -7,7 +7,7 @@
 
 #pragma once
 
-namespace shared::graphics
+namespace shared::rendering
 {
   typedef unsigned char SoundVolume;
   typedef enum

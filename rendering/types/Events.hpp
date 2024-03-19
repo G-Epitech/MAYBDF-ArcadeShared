@@ -7,7 +7,7 @@
 
 #pragma once
 
-namespace shared::graphics::events
+namespace shared::rendering::events
 {
   typedef enum
   {

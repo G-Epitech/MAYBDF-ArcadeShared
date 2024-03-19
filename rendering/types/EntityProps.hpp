@@ -14,7 +14,7 @@
 
 using namespace shared::types;
 
-namespace shared::graphics
+namespace shared::rendering
 {
   typedef struct
   {

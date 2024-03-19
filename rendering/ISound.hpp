@@ -9,12 +9,12 @@
 
 #include "types/Sound.hpp"
 
-namespace shared::graphics
+namespace shared::rendering
 {
   class ISound;
 }
 
-class shared::graphics::ISound {
+class shared::rendering::ISound {
   public:
     virtual ~ISound() = default;
 

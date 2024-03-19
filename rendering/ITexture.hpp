@@ -7,8 +7,11 @@
 
 #pragma once
 
+namespace shared::rendering {
+    class ITexture;
+}
+
 class ITexture {
   public:
     virtual ~ITexture() = default;
-
 };

@@ -13,12 +13,12 @@
 
 using namespace shared::types;
 
-namespace shared::graphics
+namespace shared::rendering
 {
   class IWindow;
 }
 
-class shared::graphics::IWindow {
+class shared::rendering::IWindow {
   public:
     virtual ~IWindow() = default;
 

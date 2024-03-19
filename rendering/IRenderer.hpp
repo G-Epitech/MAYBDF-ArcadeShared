@@ -7,7 +7,13 @@
 
 #pragma once
 
-class IRenderer {
+namespace shared::rendering
+{
+  class IRenderer;
+}
+
+class IRenderer
+{
   public:
-    virtual ~IRenderer() = default;
+  virtual ~IRenderer() = default;
 };
