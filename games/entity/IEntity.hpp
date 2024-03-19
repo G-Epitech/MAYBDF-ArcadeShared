@@ -51,4 +51,11 @@ public:
    * @param keyData Key data of key pressed
    */
   virtual void onKeyPress(game::UniqueGame &ctx, events::KeyData keyData) = 0;
+
+  /**
+   * @brief On key release event handler for the entity
+   * @param ctx Context of the game
+   * @param keyData Key data of key released
+   */
+  virtual void onKeyRelease(game::UniqueGame &ctx, events::KeyData keyData) = 0;
 };
