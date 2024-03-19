@@ -46,4 +46,18 @@ class shared::rendering::ISound {
      * @return Volume of the sound
      */
     virtual SoundVolume getVolume() const = 0;
+
+    /**
+     * @brief Set the loop state of sound
+     *
+     * @param loop Loop state of sound
+     */
+    virtual void setLoopState(bool loop) = 0;
+
+    /**
+     * @brief Get the loop state of sound
+     *
+     * @return Loop state of sound
+     */
+    virtual bool getLoopState(void) const = 0;
 };
