@@ -30,6 +30,7 @@ namespace shared::games
     const std::string path; // Sound file path
     SoundState state;       // Current sound state
     SoundVolume volume;     // Sound volume
+    bool loop;              // Loop sound
   } SoundProps;
 
   typedef std::map<UUId, std::unique_ptr<SoundProps>> SoundsPropsMap;
