@@ -64,5 +64,5 @@ public:
    * @param id Id of the entity
    * @return The specific entity
    */
-  virtual std::shared_ptr<entity::IEntity> getEntityById(UUId id) const = 0;
+  virtual std::shared_ptr<entity::IEntity> getEntityById(uuid_t id) const = 0;
 };

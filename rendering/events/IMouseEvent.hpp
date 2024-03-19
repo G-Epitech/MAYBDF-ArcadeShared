@@ -13,6 +13,10 @@
 namespace shared::rendering::events
 {
   class IMouseEvent;
+  typedef enum {
+    LEFT,
+    RIGHT
+  } MouseButton;
 }
 
 class shared::rendering::events::IMouseEvent : public IEvent
@@ -22,6 +26,7 @@ class shared::rendering::events::IMouseEvent : public IEvent
 
     /**
      * @brief Mouse position
+     *
      */
     const shared::types::Vector2f position;
 };

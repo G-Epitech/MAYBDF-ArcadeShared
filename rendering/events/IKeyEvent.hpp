@@ -2,15 +2,16 @@
 ** EPITECH PROJECT, 2024
 ** arcade-shared
 ** File description:
-** KeyData
+** IKeyEvent
 */
 
 #pragma once
 
-#include "../../types/types.hpp"
+#include "IEvent.hpp"
 
-namespace shared::games::events
-{
+namespace shared::rendering::events {
+  class IKeyEvent;
+
   typedef enum
   {
     CONTROL, // Control key (`Ctrl`, `Shift`, `Alt`)
@@ -39,13 +40,24 @@ namespace shared::games::events
   {
     ControlCode control;     // Control key
     ArrowCode arrow;         // Arrow key
-    char character;          // ASCII character value
+    char character; // ASCII character value
     unsigned char func;      // Function key number
   } KeyCode;
-
-  typedef struct
-  {
-    KeyCode code; // Key code. Interpretation depends on the type
-    KeyType type; // Type of the key
-  } KeyData;
 }
+
+class shared::rendering::events::IKeyEvent: public IEvent {
+  public:
+    virtual ~IKeyEvent() = default;
+
+    /**
+     * @brief Key code content
+     *
+     */
+    const KeyCode code;
+
+    /**
+     * @brief Key type
+     *
+     */
+    const KeyType type;
+};

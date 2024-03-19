@@ -56,7 +56,7 @@ public:
    * @brief On release event handler for the entity
    * @param ctx Context of the game
    */
-  virtual void onMouseRealease(game::UniqueGame &ctx) = 0;
+  virtual void onMouseRelease(game::UniqueGame &ctx) = 0;
 
   /**
    * @brief On hover event handler for the entity

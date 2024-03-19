@@ -10,6 +10,7 @@
 #include <map>
 #include <string>
 #include <memory>
+#include <uuid/uuid.h>
 #include "../../types/types.hpp"
 
 using namespace shared::types;
@@ -33,5 +34,5 @@ namespace shared::games
     bool loop;              // Loop sound
   } SoundProps;
 
-  typedef std::map<UUId, std::unique_ptr<SoundProps>> SoundsPropsMap;
+  typedef std::map<uuid_t, std::unique_ptr<SoundProps>> SoundsPropsMap;
 }

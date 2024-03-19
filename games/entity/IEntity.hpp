@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "../../types/UUId.hpp"
+#include <uuid/uuid.h>
 #include "../types/KeyData.hpp"
 #include "../types/SoundProps.hpp"
 
@@ -24,9 +24,9 @@ namespace shared::games
   {
     class IEntity;
 
-    typedef std::map<UUId, std::shared_ptr<IEntity>> EntitiesMap;
+    typedef std::map<uuid_t, std::shared_ptr<IEntity>> EntitiesMap;
   }
-} 
+}
 
 class shared::games::entity::IEntity
 {
