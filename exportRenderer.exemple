@@ -1,0 +1,10 @@
+
+extern "C" LibraryType arcadeLibGetType()
+{
+    ...
+}
+
+extern "C" std::unique_ptr<IRenderer> arcadeLibGetRenderer()
+{
+    ...
+}
