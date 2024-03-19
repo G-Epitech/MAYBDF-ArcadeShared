@@ -23,7 +23,7 @@ public:
   virtual ~IDisplayableEntity() = default;
 
   /**
-   * @brief Size of the entity
+   * @brief Size of the entity (tiles)
    *
    */
   Vector2u size;
@@ -35,7 +35,7 @@ public:
   unsigned int zIndex;
 
   /**
-   * @brief Entity position
+   * @brief Entity position (tiles)
    *
    */
   Vector2i position;
@@ -44,7 +44,7 @@ public:
    * @brief Texture properties
    *
    */
-  TextureProps textureProps;
+  TextureProps textureSources;
 
   /**
    * @brief On click event handler for the entity

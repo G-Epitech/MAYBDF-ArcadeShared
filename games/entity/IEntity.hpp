@@ -26,18 +26,12 @@ namespace shared::games
 
     typedef std::map<UUId, std::shared_ptr<IEntity>> EntitiesMap;
   }
-}
+} 
 
 class shared::games::entity::IEntity
 {
 public:
   virtual ~IEntity() = default;
-
-  /**
-   * @brief Get the UUId of the entity
-   *
-   */
-  virtual UUId GetUUId() const = 0;
 
   /**
    * @brief Sounds properties of the entity

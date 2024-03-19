@@ -40,7 +40,7 @@ public:
   const GameManifest manifest;
 
   /**
-   * @brief The minimum window size required for the game
+   * @brief The minimum window size required for the game (pixels)
    *
    */
   const Vector2u windowMinSize;
@@ -65,20 +65,4 @@ public:
    * @return The specific entity
    */
   virtual std::shared_ptr<entity::IEntity> getEntityById(UUId id) const = 0;
-
-protected:
-  /**
-   * @brief Register entity to the game
-   * @warning The unique ptr will be moved to the game map. The ownership will be updated.
-   *
-   * @param entity The unique ptr of the entity
-   * @return New unique ID of the entity
-   */
-  virtual UUId _registerEntity(std::shared_ptr<entity::IEntity> entity) = 0;
-
-  /**
-   * @brief Map of entities
-   *
-   */
-  entity::EntitiesMap _entities;
 };

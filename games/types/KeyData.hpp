@@ -37,10 +37,10 @@ namespace shared::games::events
 
   typedef union
   {
-    ControlCode control; // Control key
-    ArrowCode arrow;     // Arrow key
-    char character;      // ASCII character value
-    int func;            // Function key number
+    ControlCode control;     // Control key
+    ArrowCode arrow;         // Arrow key
+    unsigned char character; // ASCII character value
+    unsigned char func;      // Function key number
   } KeyCode;
 
   typedef struct
