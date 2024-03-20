@@ -7,44 +7,33 @@
 
 #pragma once
 
-#include "IMouseEvent.hpp"
+#include "AMouseEvent.hpp"
 
 namespace shared::rendering::events
 {
+  template<EventType T>
   class AMouseButtonEvent;
 }
 
-class shared::rendering::events::AMouseButtonEvent : public IMouseEvent
+template<shared::rendering::events::EventType T>
+class shared::rendering::events::AMouseButtonEvent: public AMouseEvent<T>
 {
   public:
     ~AMouseButtonEvent() = default;
 
     /**
-     * @brief Event type
-     *
-     */
-    const EventType getType(void) const noexcept;
-
-    /**
-     * @brief Mouse position
-     *
-     */
-    const shared::types::Vector2f getPosition(void) const noexcept;
-
-    /**
      * @brief Mouse button released
      *
      */
-    const MouseButton getButton(void) const noexcept;
+    const MouseButton getButton(void) const noexcept {
+      return this->_button;
+    }
 
   protected:
     AMouseButtonEvent(
-      EventType type,
-      shared::types::Vector2f position,
-      MouseButton button
-    );
+      MouseButton button,
+      types::Vector2f position
+    ): AMouseEvent<T>(position), _button(button) {}
 
-    EventType       _type;
-    types::Vector2f _position;
     MouseButton     _button;
 };

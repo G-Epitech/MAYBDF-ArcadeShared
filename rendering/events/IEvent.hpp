@@ -20,7 +20,6 @@ namespace shared::rendering::events
     MOUSE_MOVE,         // Mouse moved
     WINDOW_CLOSE,       // Window closed
     WINDOW_RESIZE,      // Window resized
-    TEXT_ENTER          // Text entered
   } EventType;
 }
 
@@ -32,5 +31,5 @@ class shared::rendering::events::IEvent
     /**
      * @brief Event type
      */
-    const EventType type;
+    virtual const EventType getType() const noexcept = 0;
 };

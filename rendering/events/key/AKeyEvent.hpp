@@ -2,15 +2,16 @@
 ** EPITECH PROJECT, 2024
 ** arcade-shared
 ** File description:
-** IKeyEvent
+** AKeyEvent
 */
 
 #pragma once
 
-#include "IEvent.hpp"
+#include "../IEvent.hpp"
 
 namespace shared::rendering::events {
-  class IKeyEvent;
+  template<EventType T>
+  class AKeyEvent;
 
   typedef enum
   {
@@ -45,19 +46,42 @@ namespace shared::rendering::events {
   } KeyCode;
 }
 
-class shared::rendering::events::IKeyEvent: public IEvent {
+template<shared::rendering::events::EventType T>
+class shared::rendering::events::AKeyEvent: public IEvent {
   public:
-    virtual ~IKeyEvent() = default;
+    ~AKeyEvent() = default;
+
+    /**
+     * @brief Event type
+     *
+     */
+    const EventType getType(void) const noexcept
+    {
+      return this->_type;
+    }
 
     /**
      * @brief Key code content
      *
      */
-    const KeyCode code;
+    const KeyCode getKeyCode(void) const noexcept
+    {
+      return this->_keyCode;
+    }
 
     /**
      * @brief Key type
      *
      */
-    const KeyType type;
+    const KeyType getKeyType(void) const noexcept
+    {
+      return this->_keyType;
+    }
+
+  protected:
+    AKeyEvent(KeyType keyType, KeyCode keyCode) : _keyType(keyType), _keyCode(keyCode) {}
+
+    EventType _type = T;
+    KeyType   _keyType;
+    KeyCode   _keyCode;
 };

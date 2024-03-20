@@ -7,7 +7,6 @@
 
 #pragma once
 
-#include "../../types/types.hpp"
 #include "AMouseButtonEvent.hpp"
 
 namespace shared::rendering::events
@@ -15,12 +14,11 @@ namespace shared::rendering::events
   class MouseButtonReleaseEvent;
 }
 
-class shared::rendering::events::MouseButtonReleaseEvent : public AMouseButtonEvent
+class shared::rendering::events::MouseButtonReleaseEvent :
+  public AMouseButtonEvent<EventType::MOUSE_BTN_RELEASE>
 {
   public:
-    MouseButtonReleaseEvent(
-      shared::types::Vector2f position,
-      MouseButton button
-    );
+    MouseButtonReleaseEvent(MouseButton button, types::Vector2f position)
+      : AMouseButtonEvent(button, position) {}
     ~MouseButtonReleaseEvent() = default;
 };

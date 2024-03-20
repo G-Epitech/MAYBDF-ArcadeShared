@@ -1,37 +1,22 @@
 /*
 ** EPITECH PROJECT, 2024
-** arcade-shared [WSL: Ubuntu-22.04]
+** arcade-shared
 ** File description:
 ** IMouseEvent
 */
 
 #pragma once
 
-#include "IMouseEvent.hpp"
+#include "AMouseEvent.hpp"
 
 namespace shared::rendering::events
 {
   class MouseMoveEvent;
 }
 
-class shared::rendering::events::MouseMoveEvent : public IMouseEvent
+class shared::rendering::events::MouseMoveEvent : public AMouseEvent<EventType::MOUSE_MOVE>
 {
    public:
-    MouseMoveEvent(types::Vector2f position);
-    ~MouseMoveEvent();
-
-    /**
-     * @brief Event type
-     *
-     */
-    const EventType getType(void) const noexcept;
-
-    /**
-     * @brief Mouse position
-     *
-     */
-    const types::Vector2f getPosition(void) const noexcept;
-
-  protected:
-    types::Vector2f _position;
+    MouseMoveEvent(types::Vector2f position) : AMouseEvent(position) {}
+    ~MouseMoveEvent() = default;
 };
