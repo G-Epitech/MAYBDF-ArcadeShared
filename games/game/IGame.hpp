@@ -37,20 +37,20 @@ public:
    * @brief Manifest with informations of the game
    *
    */
-  const GameManifest manifest;
+  virtual const GameManifest getManifest(void) const noexcept = 0;
 
   /**
    * @brief The minimum window size required for the game (pixels)
    *
    */
-  const Vector2u windowMinSize;
+  virtual const Vector2u getWindowMinSize(void) const noexcept = 0;
 
   /**
    * @brief Number of tiles that represent the game
    * Tile size is managed by the renderer
    *
    */
-  const Vector2u size;
+  virtual const Vector2u getSize(void) const noexcept = 0;
 
   /**
    * @brief Get map of entities
