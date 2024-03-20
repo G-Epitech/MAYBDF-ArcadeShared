@@ -7,10 +7,9 @@
 
 #pragma once
 
-#include "IComponent.hpp"
+#include "IPositionComponent.hpp"
 #include "../IGame.hpp"
 #include "../../types/Vector.hpp"
-#include "../types/TextureProps.hpp"
 
 namespace shared::games::components {
   class IDisplayableComponent;
@@ -29,7 +28,7 @@ namespace shared::games::components {
   } TextureProps;
 }
 
-class shared::games::components::IDisplayableComponent: public IComponent
+class shared::games::components::IDisplayableComponent: public virtual IPositionComponent
 {
 public:
   virtual ~IDisplayableComponent() = default;
@@ -45,12 +44,6 @@ public:
    *
    */
   virtual unsigned int &getZIndex(void) noexcept = 0;
-
-  /**
-   * @brief Get position of the entity (tiles)
-   *
-   */
-  virtual Vector2i &getPosition(void) noexcept = 0;
 
   /**
    * @brief Get texture properties

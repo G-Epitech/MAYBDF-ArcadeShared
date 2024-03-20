@@ -12,8 +12,11 @@
 
 namespace shared::games::components {
   typedef enum {
-    RENDER,
+    DISPLAYABLE,
     SOUND,
+    COLLIDABLE,
+    POSITION,
+    KEYBOARD
   } ComponentType;
 
   class IComponent;

@@ -8,22 +8,17 @@
 #pragma once
 
 #include "../IGame.hpp"
-#include "IComponent.hpp"
+#include "IPositionComponent.hpp"
 #include "../../types/Vector.hpp"
 
 namespace shared::games::components {
   class ICollidableComponent;
 }
 
-class shared::games::components::ICollidableComponent: public IComponent {
+class shared::games::components::ICollidableComponent: public virtual IPositionComponent
+{
 public:
   virtual ~ICollidableComponent() = default;
-
-  /**
-   * @brief Get position of the entity (tiles)
-   *
-   */
-  virtual types::Vector2i &getPosition(void) noexcept = 0;
 
   /**
    * @brief On collide event handler for the component

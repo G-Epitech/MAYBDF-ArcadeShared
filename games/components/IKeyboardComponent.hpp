@@ -51,7 +51,7 @@ namespace shared::games::components {
   } KeyData;
 }
 
-class shared::games::components::IKeyboardComponent: public IComponent
+class shared::games::components::IKeyboardComponent: public virtual IComponent
 {
 public:
   virtual ~IKeyboardComponent() = default;
