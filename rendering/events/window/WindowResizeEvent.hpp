@@ -16,7 +16,7 @@ namespace shared::rendering::events {
 
 class shared::rendering::events::WindowResizeEvent: public IEvent {
   public:
-    WindowResizeEvent(types::Vector2u size) : _size(size) {}
+    WindowResizeEvent(types::Vector2u newSize) : _newSize(newSize) {}
     ~WindowResizeEvent() = default;
 
     /**
@@ -33,11 +33,11 @@ class shared::rendering::events::WindowResizeEvent: public IEvent {
      *
      * @return New window size
      */
-    const types::Vector2u &getSize() const noexcept
+    const types::Vector2u &getNewSize() const noexcept
     {
-      return this->_size;
+      return this->_newSize;
     }
 
     protected:
-      types::Vector2u _size;
+      types::Vector2u _newSize;
 };
