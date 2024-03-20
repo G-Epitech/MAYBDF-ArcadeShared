@@ -15,7 +15,7 @@ namespace shared::games::components {
   class ICollidableComponent;
 }
 
-class shared::games::components::ICollidableComponent: public virtual IComponent {
+class shared::games::components::ICollidableComponent: public IComponent {
 public:
   virtual ~ICollidableComponent() = default;
 

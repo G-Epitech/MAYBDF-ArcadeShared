@@ -24,7 +24,7 @@ namespace shared::games::components {
   typedef unsigned char SoundVolume;
 }
 
-class shared::games::components::ISoundComponent: public virtual IComponent
+class shared::games::components::ISoundComponent: public IComponent
 {
 public:
   virtual ~ISoundComponent() = default;

@@ -29,7 +29,7 @@ namespace shared::games::components {
   } TextureProps;
 }
 
-class shared::games::components::IDisplayableComponent: public virtual IComponent
+class shared::games::components::IDisplayableComponent: public IComponent
 {
 public:
   virtual ~IDisplayableComponent() = default;
