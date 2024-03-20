@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "IEvent.hpp"
+#include "../IEvent.hpp"
 
 namespace shared::graphics::events {
   class WindowCloseEvent;

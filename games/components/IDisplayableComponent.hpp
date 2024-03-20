@@ -1,28 +1,40 @@
 /*
 ** EPITECH PROJECT, 2024
-** arcade-shared
+** arcade-shared [WSL: Ubuntu-22.04]
 ** File description:
-** IEntity
+** ADisplaybleComponent
 */
 
 #pragma once
 
-#include "IEntity.hpp"
-#include "../game/IGame.hpp"
+#include "IComponent.hpp"
+#include "../IGame.hpp"
 #include "../../types/Vector.hpp"
 #include "../types/TextureProps.hpp"
 
-namespace shared::games::entity
-{
-  class IDisplayableEntity;
+namespace shared::games::components {
+  class IDisplayableComponent;
+
+  typedef struct
+  {
+    const std::string ascii; // ASCII image representation path
+    const std::string bin;   // Binary image path
+    Vector2f binTileSize;    // Size of the binary tile
+  } TextureSources;
+
+  typedef struct
+  {
+    TextureSources sources; // Sources of textures
+    Vector2u origin;        // Origin of the texture
+  } TextureProps;
 }
 
-class shared::games::entity::IDisplayableEntity : public IEntity
+class shared::games::components::IDisplayableComponent: public virtual IComponent
 {
 public:
-  virtual ~IDisplayableEntity() = default;
+  virtual ~IDisplayableComponent() = default;
 
-  /**
+    /**
    * @brief Get size of the entity (tiles)
    *
    */
@@ -63,11 +75,4 @@ public:
    * @param ctx Context of the game
    */
   virtual void onMouseHover(game::UniqueGame &ctx) = 0;
-
-  /**
-   * @brief On collide event handler for the entity
-   * @param ctx Context of the game
-   * @param target Target entity
-   */
-  virtual void onCollide(game::UniqueGame &ctx, std::shared_ptr<IDisplayableEntity> target) = 0;
 };

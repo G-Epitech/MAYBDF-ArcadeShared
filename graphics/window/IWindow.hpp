@@ -8,9 +8,10 @@
 #pragma once
 
 #include <string>
+
+#include "IWindowIcon.hpp"
 #include "../../types/types.hpp"
 #include "../types/EntityProps.hpp"
-#include "IWindowIcon.hpp"
 
 using namespace shared::types;
 

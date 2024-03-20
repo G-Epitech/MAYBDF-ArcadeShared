@@ -2,15 +2,16 @@
 ** EPITECH PROJECT, 2024
 ** arcade-shared
 ** File description:
-** KeyData
+** IKeyboardComponent
 */
 
 #pragma once
 
-#include "../../types/types.hpp"
+#include "IComponent.hpp"
 
-namespace shared::games::events
-{
+namespace shared::games::components {
+  class IKeyboardComponent;
+
   typedef enum
   {
     CONTROL, // Control key (`Ctrl`, `Shift`, `Alt`)
@@ -49,3 +50,23 @@ namespace shared::games::events
     KeyType type; // Type of the key
   } KeyData;
 }
+
+class shared::games::components::IKeyboardComponent: public virtual IComponent
+{
+public:
+  virtual ~IKeyboardComponent() = default;
+
+  /**
+   * @brief On key pressed event handler for the entity
+   * @param ctx Context of the game
+   * @param keyData Key data of key pressed
+   */
+  virtual void onKeyPress(game::UniqueGame &ctx, KeyData keyData) = 0;
+
+  /**
+   * @brief On key release event handler for the entity
+   * @param ctx Context of the game
+   * @param keyData Key data of key released
+   */
+  virtual void onKeyRelease(game::UniqueGame &ctx, KeyData keyData) = 0;
+};

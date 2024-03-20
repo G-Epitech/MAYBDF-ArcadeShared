@@ -8,7 +8,8 @@
 #pragma once
 
 #include <memory>
-#include "../entity/IEntity.hpp"
+#include "../IEntity.hpp"
+#include "../../types/types.hpp"
 #include "../types/GameManifest.hpp"
 
 using namespace shared::types;
@@ -64,5 +65,5 @@ public:
    * @param id Id of the entity
    * @return The specific entity
    */
-  virtual std::shared_ptr<entity::IEntity> getEntityById(uuid_t id) const = 0;
+  virtual std::shared_ptr<entity::IEntity> getEntityById(const UUId &id) const = 0;
 };

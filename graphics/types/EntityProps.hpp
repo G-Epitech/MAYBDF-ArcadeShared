@@ -9,8 +9,8 @@
 
 #include <memory>
 
-#include "../../types/types.hpp"
 #include "../ITexture.hpp"
+#include "../../types/types.hpp"
 
 using namespace shared::types;
 
