@@ -9,6 +9,8 @@
 
 #include <string>
 #include "../../types/types.hpp"
+#include "../types/EntityProps.hpp"
+#include "IWindowIcon.hpp"
 
 using namespace shared::types;
 
@@ -21,6 +23,14 @@ namespace shared::graphics
     WINDOWED,
     FULLSCREEN
   } WindowMode;
+
+  typedef struct {
+    Vector2u size;            //Initial size of the window
+    WindowMode mode;          //Initial mode of the window
+    unsigned int fps;         //Initial framerate of the window
+    const std::string title;  //Initial title of the window
+    const std::string icon;   //Initial icon of the window
+  } WindowInitProps;
 }
 
 class shared::graphics::IWindow {
@@ -81,19 +91,38 @@ class shared::graphics::IWindow {
      *
      * @return Mode of the window
      */
-    virtual WindowMode getMode() const = 0;
+    virtual WindowMode getMode(void) const = 0;
 
     /**
      * @brief Set the icon of the window
      *
-     * @param iconPath Path to the icon
+     * @param icon Icon to use
      */
-    virtual void setIcon(const std::string &iconPath) = 0;
+    virtual void setIcon(const IWindowIcon &icon) = 0;
 
     /**
      * @brief Get the icon of the window
      *
-     * @return Path to the icon
+     * @return Icon object of the window
      */
-    virtual std::string getIcon() const = 0;
+    virtual const IWindowIcon &getIcon(void) const = 0;
+
+    /**
+     * @brief Render the entity with given properties
+     *
+     * @param props Properties of the entity to render
+     */
+    virtual void render(const EntityProps &props) = 0;
+
+    /**
+     * @brief Clear the content of the window
+     *
+     */
+    virtual void clear(void) = 0;
+
+    /**
+     * @brief Display the content of the window
+     *
+     */
+    virtual void display(void) = 0;
 };
