@@ -1,10 +1,11 @@
+#include "types/LibraryType.hpp"
 
-extern "C" LibraryType arcadeLibGetType()
+extern "C" shared::types::Renderer arcadeLibGetType()
 {
-    ...
+    return shared::types::LibraryType::RENDERER;
 }
 
-extern "C" std::unique_ptr<IRenderer> arcadeLibGetRenderer()
+extern "C" std::unique_ptr<shared::graphic::IRenderer> arcadeLibGetRenderer()
 {
-    ...
+    return std::make_unique<RendererClass>(...);
 }

@@ -10,7 +10,7 @@
 namespace shared::types
 {
   enum LibraryType{
-    Game,
-    Renderer
+    GAME,
+    RENDERER
   };
 }
