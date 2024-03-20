@@ -9,12 +9,12 @@
 
 #include "AMouseEvent.hpp"
 
-namespace shared::rendering::events
+namespace shared::graphics::events
 {
   class MouseMoveEvent;
 }
 
-class shared::rendering::events::MouseMoveEvent : public AMouseEvent<EventType::MOUSE_MOVE>
+class shared::graphics::events::MouseMoveEvent : public AMouseEvent<EventType::MOUSE_MOVE>
 {
    public:
     MouseMoveEvent(types::Vector2f position) : AMouseEvent(position) {}

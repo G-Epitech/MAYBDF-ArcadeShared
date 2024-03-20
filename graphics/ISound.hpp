@@ -7,7 +7,7 @@
 
 #pragma once
 
-namespace shared::rendering::sound
+namespace shared::graphics
 {
   class ISound;
 
@@ -20,7 +20,7 @@ namespace shared::rendering::sound
   } SoundState;
 }
 
-class shared::rendering::sound::ISound {
+class shared::graphics::ISound {
   public:
     virtual ~ISound() = default;
 

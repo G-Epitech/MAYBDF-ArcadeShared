@@ -9,11 +9,11 @@
 
 #include "IEvent.hpp"
 
-namespace shared::rendering::events {
+namespace shared::graphics::events {
   class WindowCloseEvent;
 }
 
-class shared::rendering::events::WindowCloseEvent: public IEvent {
+class shared::graphics::events::WindowCloseEvent: public IEvent {
   public:
     WindowCloseEvent() = default;
     ~WindowCloseEvent() = default;

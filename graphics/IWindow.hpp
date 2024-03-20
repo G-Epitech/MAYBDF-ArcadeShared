@@ -9,11 +9,10 @@
 
 #include <string>
 #include "../../types/types.hpp"
-#include "types/Window.hpp"
 
 using namespace shared::types;
 
-namespace shared::rendering
+namespace shared::graphics
 {
   class IWindow;
 
@@ -24,7 +23,7 @@ namespace shared::rendering
   } WindowMode;
 }
 
-class shared::rendering::IWindow {
+class shared::graphics::IWindow {
   public:
     virtual ~IWindow() = default;
 
@@ -75,14 +74,14 @@ class shared::rendering::IWindow {
      *
      * @param mode Mode to apply to the window
      */
-    virtual void setWindowMode(WindowMode mode) = 0;
+    virtual void setMode(WindowMode mode) = 0;
 
     /**
      * @brief Get the mode of the window
      *
      * @return Mode of the window
      */
-    virtual WindowMode getWindowMode() const = 0;
+    virtual WindowMode getMode() const = 0;
 
     /**
      * @brief Set the icon of the window

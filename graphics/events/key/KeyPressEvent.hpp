@@ -9,11 +9,11 @@
 
 #include "AKeyEvent.hpp"
 
-namespace shared::rendering::events {
+namespace shared::graphics::events {
   class KeyPressEvent;
 }
 
-class shared::rendering::events::KeyPressEvent: public AKeyEvent<EventType::KEY_PRESS> {
+class shared::graphics::events::KeyPressEvent: public AKeyEvent<EventType::KEY_PRESS> {
   public:
     KeyPressEvent(KeyType keyType, KeyCode keyCode): AKeyEvent(keyType, keyCode) {}
 };

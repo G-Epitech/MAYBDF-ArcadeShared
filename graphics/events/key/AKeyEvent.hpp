@@ -9,7 +9,7 @@
 
 #include "../IEvent.hpp"
 
-namespace shared::rendering::events {
+namespace shared::graphics::events {
   template<EventType T>
   class AKeyEvent;
 
@@ -46,8 +46,8 @@ namespace shared::rendering::events {
   } KeyCode;
 }
 
-template<shared::rendering::events::EventType T>
-class shared::rendering::events::AKeyEvent: public IEvent {
+template<shared::graphics::events::EventType T>
+class shared::graphics::events::AKeyEvent: public IEvent {
   public:
     ~AKeyEvent() = default;
 

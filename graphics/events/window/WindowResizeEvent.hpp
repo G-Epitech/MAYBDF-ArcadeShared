@@ -10,11 +10,11 @@
 #include "../IEvent.hpp"
 #include "../../../types/types.hpp"
 
-namespace shared::rendering::events {
+namespace shared::graphics::events {
   class WindowResizeEvent;
 }
 
-class shared::rendering::events::WindowResizeEvent: public IEvent {
+class shared::graphics::events::WindowResizeEvent: public IEvent {
   public:
     WindowResizeEvent(types::Vector2u newSize) : _newSize(newSize) {}
     ~WindowResizeEvent() = default;

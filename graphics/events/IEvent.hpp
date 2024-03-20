@@ -7,7 +7,7 @@
 
 #pragma once
 
-namespace shared::rendering::events
+namespace shared::graphics::events
 {
   class IEvent;
 
@@ -23,7 +23,7 @@ namespace shared::rendering::events
   } EventType;
 }
 
-class shared::rendering::events::IEvent
+class shared::graphics::events::IEvent
 {
   public:
     virtual ~IEvent() = default;

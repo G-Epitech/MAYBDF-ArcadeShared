@@ -9,12 +9,12 @@
 
 #include "AMouseButtonEvent.hpp"
 
-namespace shared::rendering::events
+namespace shared::graphics::events
 {
   class MouseButtonReleaseEvent;
 }
 
-class shared::rendering::events::MouseButtonReleaseEvent :
+class shared::graphics::events::MouseButtonReleaseEvent :
   public AMouseButtonEvent<EventType::MOUSE_BTN_RELEASE>
 {
   public:

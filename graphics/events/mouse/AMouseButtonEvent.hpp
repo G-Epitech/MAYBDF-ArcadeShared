@@ -9,14 +9,14 @@
 
 #include "AMouseEvent.hpp"
 
-namespace shared::rendering::events
+namespace shared::graphics::events
 {
   template<EventType T>
   class AMouseButtonEvent;
 }
 
-template<shared::rendering::events::EventType T>
-class shared::rendering::events::AMouseButtonEvent: public AMouseEvent<T>
+template<shared::graphics::events::EventType T>
+class shared::graphics::events::AMouseButtonEvent: public AMouseEvent<T>
 {
   public:
     ~AMouseButtonEvent() = default;

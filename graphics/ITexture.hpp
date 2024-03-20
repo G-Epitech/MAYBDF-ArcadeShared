@@ -7,7 +7,7 @@
 
 #pragma once
 
-namespace shared::rendering {
+namespace shared::graphics {
     class ITexture;
 }
 
