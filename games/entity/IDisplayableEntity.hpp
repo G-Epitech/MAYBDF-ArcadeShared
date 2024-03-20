@@ -23,28 +23,28 @@ public:
   virtual ~IDisplayableEntity() = default;
 
   /**
-   * @brief Size of the entity (tiles)
+   * @brief Get size of the entity (tiles)
    *
    */
-  Vector2u size;
+  virtual Vector2u &getSize(void) noexcept = 0;
 
   /**
-   * @brief Z index that is usefull for display prioroty
+   * @brief Get Z index that is usefull for display prioroty
    *
    */
-  unsigned int zIndex;
+  virtual unsigned int &getZIndex(void) noexcept = 0;
 
   /**
-   * @brief Entity position (tiles)
+   * @brief Get position of the entity (tiles)
    *
    */
-  Vector2i position;
+  virtual Vector2i &getPosition(void) noexcept = 0;
 
   /**
-   * @brief Texture properties
+   * @brief Get texture properties
    *
    */
-  TextureProps textureSources;
+  virtual TextureProps &getTextureProps(void) noexcept = 0;
 
   /**
    * @brief On click event handler for the entity

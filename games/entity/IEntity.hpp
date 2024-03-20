@@ -34,10 +34,10 @@ public:
   virtual ~IEntity() = default;
 
   /**
-   * @brief Sounds properties of the entity
+   * @brief Get Sounds properties of the entity
    *
    */
-  SoundsPropsMap soundsProps;
+  virtual SoundProps &getSoundProps(void) noexcept = 0;
 
   /**
    * @brief On key pressed event handler for the entity
