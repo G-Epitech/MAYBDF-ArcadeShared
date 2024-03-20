@@ -8,8 +8,10 @@
 #pragma once
 
 #include <string>
+#include <vector>
 
 #include "IWindowIcon.hpp"
+#include "events/IEvent.hpp"
 #include "../../types/types.hpp"
 #include "../types/EntityProps.hpp"
 
@@ -126,4 +128,28 @@ class shared::graphics::IWindow {
      *
      */
     virtual void display(void) = 0;
+
+    /**
+     * @brief Close the window
+     *
+     */
+    virtual void close(void) = 0;
+
+    /**
+     * @brief Check if the window is open
+     *
+     * @return Open status of the window
+     */
+    virtual bool isOpen(void) const = 0;
+
+    /**
+     * @brief Get the events object
+     *
+     * @return Last events occured
+     * @warning Call successively this method will result in losing events
+     * @note Call `A` return `eventsA` containing 2 events,
+     * but make another call `B` (directly after call `A`) `eventsB`
+     * will result to an empty vector
+     */
+    virtual std::vector<events::IEvent> getEvents(void) = 0;
 };
