@@ -1,0 +1,19 @@
+/*
+** EPITECH PROJECT, 2024
+** arcade-shared
+** File description:
+** export
+*/
+
+#include "IGame.hpp"
+#include "../types/LibraryType.hpp"
+
+extern "C" shared::types::LibraryType arcadeLibGetType(void)
+{
+    return shared::types::LibraryType::GAME;
+}
+
+extern "C" std::unique_ptr<shared::games::game::IGame> arcadeLibGetGame(void)
+{
+    return std::make_unique<GameClass>(...)
+}
