@@ -14,12 +14,7 @@
 
 namespace shared::games
 {
-  namespace game
-  {
-    class IGame;
-
-    typedef std::unique_ptr<IGame> UniqueGame;
-  }
+  class IGame;
 
   namespace entity
   {
