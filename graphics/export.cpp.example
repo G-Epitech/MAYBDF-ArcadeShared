@@ -14,8 +14,8 @@ extern "C" {
         return shared::types::LibraryType::GRAPHIC;
     }
 
-    std::unique_ptr<shared::graphics::IGraphicsFactory> GRAPHICS_LOADER_NAME(void)
+    std::shared_ptr<shared::graphics::IGraphicsFactory> GRAPHICS_LOADER_NAME(void)
     {
-        return std::make_unique<RendererClass>(...);
+        return std::make_shared<RendererClass>(...);
     }
 }
