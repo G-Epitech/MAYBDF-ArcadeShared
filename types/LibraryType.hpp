@@ -11,6 +11,6 @@ namespace shared::types
 {
   enum LibraryType{
     GAME,
-    RENDERER
+    GRAPHIC,
   };
 }
