@@ -6,14 +6,16 @@
 */
 
 #include "IGraphicsFactory.hpp"
-#include "../types/LibraryType.hpp"
+#include "../types/Libraries.hpp"
 
-extern "C" shared::types::LibraryType arcadeLibGetType(void)
-{
-    return shared::types::LibraryType::GRAPHIC;
-}
+extern "C" {
+    shared::types::LibraryType LIBRARY_TYPE_GETTER_NAME(void)
+    {
+        return shared::types::LibraryType::GRAPHIC;
+    }
 
-extern "C" std::unique_ptr<shared::graphics::IGraphicsFactory> arcadeLibGetFactory(void)
-{
-    return std::make_unique<RendererClass>(...);
+    std::unique_ptr<shared::graphics::IGraphicsFactory> GRAPHICS_LOADER_NAME(void)
+    {
+        return std::make_unique<RendererClass>(...);
+    }
 }

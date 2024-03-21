@@ -8,12 +8,14 @@
 #include "IGame.hpp"
 #include "../types/LibraryType.hpp"
 
-extern "C" shared::types::LibraryType arcadeLibGetType(void)
-{
-    return shared::types::LibraryType::GAME;
-}
+extern "C" {
+    shared::types::LibraryType LIBRARY_TYPE_GETTER_NAME(void)
+    {
+        return shared::types::LibraryType::GAME;
+    }
 
-extern "C" std::unique_ptr<shared::games::game::IGame> arcadeLibGetGame(void)
-{
-    return std::make_unique<GameClass>(...)
+    std::unique_ptr<shared::games::game::IGame> GAME_LOADER_NAME(void)
+    {
+        return std::make_unique<GameClass>(...)
+    }
 }

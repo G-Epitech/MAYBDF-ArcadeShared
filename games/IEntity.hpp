@@ -10,8 +10,7 @@
 #include <map>
 #include <memory>
 
-#include "IGame.hpp"
-#include "../../types/UUId.hpp"
+#include "../types/UUId.hpp"
 
 namespace shared::games
 {
