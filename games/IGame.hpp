@@ -8,7 +8,8 @@
 #pragma once
 
 #include <memory>
-#include "../entity/IEntity.hpp"
+#include "../IEntity.hpp"
+#include "../../types/types.hpp"
 #include "../types/GameManifest.hpp"
 
 using namespace shared::types;
@@ -18,6 +19,7 @@ namespace shared::games::game
   class IGame;
 
   typedef std::unique_ptr<IGame> UniqueGame;
+  typedef unsigned long DeltaTime;
 }
 
 class shared::games::game::IGame
@@ -28,27 +30,28 @@ public:
   /**
    * @brief Compute the game each tick of the program
    *
+   * @param dt Time since last tick (Time in `milliseconds`)
    */
-  virtual void compute(void) = 0;
+  virtual void compute(DeltaTime dt) = 0;
 
   /**
    * @brief Manifest with informations of the game
    *
    */
-  const GameManifest manifest;
+  virtual const GameManifest getManifest(void) const noexcept = 0;
 
   /**
-   * @brief The minimum window size required for the game
+   * @brief The minimum window size required for the game (pixels)
    *
    */
-  const Vector2u windowMinSize;
+  virtual const Vector2u getWindowMinSize(void) const noexcept = 0;
 
   /**
    * @brief Number of tiles that represent the game
    * Tile size is managed by the renderer
    *
    */
-  const Vector2u size;
+  virtual const Vector2u getSize(void) const noexcept = 0;
 
   /**
    * @brief Get map of entities
@@ -62,21 +65,5 @@ public:
    * @param id Id of the entity
    * @return The specific entity
    */
-  virtual std::shared_ptr<entity::IEntity> getEntityById(UUId id) const = 0;
-
-protected:
-  /**
-   * @brief Register entity to the game
-   * @warning The unique ptr will be moved to the game map. The ownership will be updated.
-   *
-   * @param entity The unique ptr of the entity
-   * @return New unique ID of the entity
-   */
-  virtual UUId _registerEntity(std::shared_ptr<entity::IEntity> entity) = 0;
-
-  /**
-   * @brief Map of entities
-   *
-   */
-  entity::EntitiesMap _entities;
+  virtual std::shared_ptr<entity::IEntity> getEntityById(const UUId &id) const = 0;
 };
