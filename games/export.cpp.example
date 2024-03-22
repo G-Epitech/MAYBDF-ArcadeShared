@@ -6,7 +6,7 @@
 */
 
 #include "IGame.hpp"
-#include "../types/LibraryType.hpp"
+#include "../types/Libraries.hpp"
 
 extern "C" {
     shared::types::LibraryType SHARED_LIBRARY_TYPE_GETTER_NAME(void)
