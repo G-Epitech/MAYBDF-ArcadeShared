@@ -9,12 +9,12 @@
 #include "../types/LibraryType.hpp"
 
 extern "C" {
-    shared::types::LibraryType LIBRARY_TYPE_GETTER_NAME(void)
+    shared::types::LibraryType SHARED_LIBRARY_TYPE_GETTER_NAME(void)
     {
         return shared::types::LibraryType::GAME;
     }
 
-    std::shared_ptr<shared::games::IGame> GAME_LOADER_NAME(void)
+    std::shared_ptr<shared::games::IGame> SHARED_GRAPHICS_FACTORY_LOADER_NAME(void)
     {
         return std::make_shared<GameClass>(...)
     }
