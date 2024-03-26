@@ -9,7 +9,6 @@
 
 #include <string>
 #include <vector>
-#include "types/types.hpp"
 
 namespace shared::games {
     typedef struct {
