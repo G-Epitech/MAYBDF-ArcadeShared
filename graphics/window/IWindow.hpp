@@ -10,7 +10,6 @@
 #include <string>
 #include <vector>
 
-#include "IWindowIcon.hpp"
 #include "../events/IEvent.hpp"
 #include "../../types/types.hpp"
 #include "../types/EntityProps.hpp"
