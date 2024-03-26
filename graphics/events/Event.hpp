@@ -27,7 +27,6 @@ class shared::graphics::events::Event
 {
   public:
     Event(EventType type) : type(type) {}
-    virtual ~Event() = default;
 
     /**
      * @brief Event type
