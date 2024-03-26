@@ -7,11 +7,11 @@
 
 #pragma once
 
-namespace shared::graphics {
+namespace shared::graphics::texture {
     class ITexture;
 }
 
-class shared::graphics::ITexture {
+class shared::graphics::texture::ITexture {
   public:
     virtual ~ITexture() = default;
 };

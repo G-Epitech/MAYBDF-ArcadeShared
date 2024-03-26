@@ -17,28 +17,27 @@
 
 using namespace shared::types;
 
-namespace shared::graphics
-{
+namespace shared::graphics {
   class IWindow;
-
-  typedef enum
-  {
-    WINDOWED,
-    FULLSCREEN
-  } WindowMode;
-
-  typedef struct {
-    Vector2u size;            //Initial size of the window
-    WindowMode mode;          //Initial mode of the window
-    unsigned int fps;         //Initial framerate of the window
-    const std::string title;  //Initial title of the window
-    const std::string icon;   //Initial icon of the window
-  } WindowInitProps;
 }
 
 class shared::graphics::IWindow {
   public:
     virtual ~IWindow() = default;
+
+    typedef enum
+    {
+        WINDOWED,
+        FULLSCREEN
+    } WindowMode;
+
+    typedef struct {
+        Vector2u size;            //Initial size of the window
+        WindowMode mode;          //Initial mode of the window
+        unsigned int fps;         //Initial framerate of the window
+        const std::string title;  //Initial title of the window
+        const std::string icon;   //Initial icon of the window
+    } WindowInitProps;
 
     /**
      * @brief Set the title of current window
@@ -101,14 +100,14 @@ class shared::graphics::IWindow {
      *
      * @param icon Icon to use
      */
-    virtual void setIcon(std::unique_ptr<IWindowIcon> icon) = 0;
+    virtual void setIcon(const std::string &icon) = 0;
 
     /**
      * @brief Get the icon of the window
      *
      * @return Icon object of the window
      */
-    virtual const IWindowIcon &getIcon(void) const = 0;
+    virtual const std::string &getIcon(void) const = 0;
 
     /**
      * @brief Render the entity with given properties

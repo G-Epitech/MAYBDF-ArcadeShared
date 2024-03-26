@@ -7,7 +7,7 @@
 
 #pragma once
 
-namespace shared::graphics
+namespace shared::graphics::sounds
 {
   class ISound;
 
