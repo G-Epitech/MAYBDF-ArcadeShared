@@ -18,7 +18,8 @@ namespace shared::games
   {
     class IEntity;
 
-    typedef std::vector<std::shared_ptr<IEntity>> EntitiesMap;
+    typedef std::shared_ptr<IEntity> EntityPtr;
+    typedef std::vector<EntityPtr> EntitiesMap;
   }
 
   namespace components
