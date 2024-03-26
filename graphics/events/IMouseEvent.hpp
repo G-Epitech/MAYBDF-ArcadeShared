@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "../../types/types.hpp"
+#include "../../types/Vector.hpp"
 #include "IEvent.hpp"
 
 namespace shared::graphics::events {
@@ -23,5 +23,5 @@ public:
      *
      * @return Position of the mouse
      */
-    const shared::types::Vector2f getPosition(void) const noexcept = 0;
+    virtual const shared::types::Vector2f getPosition(void) const noexcept = 0;
 };

@@ -11,7 +11,7 @@
 
 #include "ISound.hpp"
 #include "ITexture.hpp"
-#include "window/IWindow.hpp"
+#include "IWindow.hpp"
 #include "types/GraphicsManifest.hpp"
 
 namespace shared::graphics {

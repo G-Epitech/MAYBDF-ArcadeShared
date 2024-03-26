@@ -9,10 +9,10 @@
 
 #include <string>
 #include <vector>
+#include <memory>
 
-#include "../events/IEvent.hpp"
-#include "../../types/types.hpp"
-#include "../types/EntityProps.hpp"
+#include "events/IEvent.hpp"
+#include "types/EntityProps.hpp"
 
 using namespace shared::types;
 
@@ -149,5 +149,5 @@ class shared::graphics::IWindow {
      * but make another call `B` (directly after call `A`) `eventsB`
      * will result to an empty vector
      */
-    virtual std::vector<events::IEvent> getEvents(void) = 0;
+    virtual std::vector<events::EventPtr> getEvents(void) = 0;
 };

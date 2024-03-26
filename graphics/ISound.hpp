@@ -7,22 +7,23 @@
 
 #pragma once
 
-namespace shared::graphics::sounds
+namespace shared::graphics
 {
   class ISound;
-
-  typedef unsigned char SoundVolume;
-  typedef enum
-  {
-    PLAY,
-    PAUSE,
-    STOP
-  } SoundState;
 }
 
 class shared::graphics::ISound {
   public:
     virtual ~ISound() = default;
+
+    typedef unsigned char SoundVolume;
+
+    typedef enum
+    {
+        PLAY,
+        PAUSE,
+        STOP
+    } SoundState;
 
     /**
      * @brief Get the state of the sound
