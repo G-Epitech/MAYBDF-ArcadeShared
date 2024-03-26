@@ -8,7 +8,7 @@
 #pragma once
 
 #include "../../../types/types.hpp"
-#include "../IEvent.hpp"
+#include "../Event.hpp"
 
 namespace shared::graphics::events
 {
@@ -22,18 +22,10 @@ namespace shared::graphics::events
 }
 
 template<shared::graphics::events::EventType T>
-class shared::graphics::events::AMouseEvent : public IEvent
+class shared::graphics::events::AMouseEvent : public Event
 {
    public:
     ~AMouseEvent() = default;
-
-    /**
-     * @brief Event type
-     *
-     */
-    const EventType getType(void) const noexcept {
-      return T;
-    }
 
     /**
      * @brief Mouse position
@@ -44,7 +36,7 @@ class shared::graphics::events::AMouseEvent : public IEvent
     }
 
   protected:
-    AMouseEvent(types::Vector2f position): _position(position) {}
+    AMouseEvent(types::Vector2f position): Event(T), _position(position) {}
 
     types::Vector2f _position;
 };

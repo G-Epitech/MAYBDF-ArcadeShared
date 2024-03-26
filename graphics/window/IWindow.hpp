@@ -10,7 +10,7 @@
 #include <string>
 #include <vector>
 
-#include "../events/IEvent.hpp"
+#include "../events/Event.hpp"
 #include "../../types/types.hpp"
 #include "../types/EntityProps.hpp"
 
@@ -150,5 +150,5 @@ class shared::graphics::IWindow {
      * but make another call `B` (directly after call `A`) `eventsB`
      * will result to an empty vector
      */
-    virtual std::vector<events::IEvent> getEvents(void) = 0;
+    virtual std::vector<events::Event> getEvents(void) = 0;
 };

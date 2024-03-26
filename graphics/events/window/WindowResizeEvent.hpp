@@ -7,26 +7,17 @@
 
 #pragma once
 
-#include "../IEvent.hpp"
+#include "../Event.hpp"
 #include "../../../types/types.hpp"
 
 namespace shared::graphics::events {
   class WindowResizeEvent;
 }
 
-class shared::graphics::events::WindowResizeEvent: public IEvent {
+class shared::graphics::events::WindowResizeEvent: public Event {
   public:
-    WindowResizeEvent(types::Vector2u newSize) : _newSize(newSize) {}
+    WindowResizeEvent(types::Vector2u newSize) : Event(WINDOW_RESIZE), _newSize(newSize) {}
     ~WindowResizeEvent() = default;
-
-    /**
-     * @brief Event type
-     *
-     */
-    const EventType getType() const noexcept
-    {
-      return WINDOW_RESIZE;
-    }
 
     /**
      * @brief Get the new window size

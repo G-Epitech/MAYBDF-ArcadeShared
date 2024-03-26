@@ -7,23 +7,14 @@
 
 #pragma once
 
-#include "../IEvent.hpp"
+#include "../Event.hpp"
 
 namespace shared::graphics::events {
   class WindowCloseEvent;
 }
 
-class shared::graphics::events::WindowCloseEvent: public IEvent {
+class shared::graphics::events::WindowCloseEvent: public Event {
   public:
-    WindowCloseEvent() = default;
+    WindowCloseEvent() : Event(WINDOW_CLOSE) {};
     ~WindowCloseEvent() = default;
-
-    /**
-     * @brief Event type
-     *
-     */
-    const EventType getType() const noexcept
-    {
-      return WINDOW_CLOSE;
-    }
 };

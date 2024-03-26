@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "../IEvent.hpp"
+#include "../Event.hpp"
 
 namespace shared::graphics::events {
   template<EventType T>
@@ -47,18 +47,9 @@ namespace shared::graphics::events {
 }
 
 template<shared::graphics::events::EventType T>
-class shared::graphics::events::AKeyEvent: public IEvent {
+class shared::graphics::events::AKeyEvent: public Event {
   public:
     ~AKeyEvent() = default;
-
-    /**
-     * @brief Event type
-     *
-     */
-    const EventType getType(void) const noexcept
-    {
-      return this->_type;
-    }
 
     /**
      * @brief Key code content
@@ -79,7 +70,7 @@ class shared::graphics::events::AKeyEvent: public IEvent {
     }
 
   protected:
-    AKeyEvent(KeyType keyType, KeyCode keyCode) : _keyType(keyType), _keyCode(keyCode) {}
+    AKeyEvent(KeyType keyType, KeyCode keyCode) : Event(T), _keyType(keyType), _keyCode(keyCode) {}
 
     EventType _type = T;
     KeyType   _keyType;

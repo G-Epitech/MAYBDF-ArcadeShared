@@ -2,14 +2,14 @@
 ** EPITECH PROJECT, 2024
 ** arcade-shared
 ** File description:
-** IEvent
+** Event
 */
 
 #pragma once
 
 namespace shared::graphics::events
 {
-  class IEvent;
+  class Event;
 
   typedef enum
   {
@@ -23,13 +23,14 @@ namespace shared::graphics::events
   } EventType;
 }
 
-class shared::graphics::events::IEvent
+class shared::graphics::events::Event
 {
   public:
-    virtual ~IEvent() = default;
+    Event(EventType type) : type(type) {}
+    virtual ~Event() = default;
 
     /**
      * @brief Event type
      */
-    virtual const EventType getType() const noexcept = 0;
+    const EventType type;
 };
