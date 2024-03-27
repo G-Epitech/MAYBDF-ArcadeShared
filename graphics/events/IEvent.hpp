@@ -22,7 +22,7 @@ namespace shared::graphics::events
     WINDOW_RESIZE,      // Window resized
   } EventType;
 
-  typedef std::unique_ptr<IEvent> EventPtr;
+  typedef std::shared_ptr<IEvent> EventPtr;
 }
 
 class shared::graphics::events::IEvent
