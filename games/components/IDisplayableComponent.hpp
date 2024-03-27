@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2024
 ** arcade-shared [WSL: Ubuntu-22.04]
 ** File description:
-** ADisplaybleComponent
+** IDisplaybleComponent
 */
 
 #pragma once
@@ -13,17 +13,6 @@
 
 namespace shared::games::components {
     class IDisplayableComponent;
-
-    typedef struct {
-        const std::string ascii; // ASCII image representation path
-        const std::string bin;   // Binary image path
-        Vector2f binTileSize;    // Size of the binary tile
-    } TextureSources;
-
-    typedef struct {
-        TextureSources sources; // Sources of textures
-        Vector2u origin;        // Origin of the texture
-    } TextureProps;
 }
 
 class shared::games::components::IDisplayableComponent : public virtual IPositionComponent {
@@ -41,12 +30,6 @@ public:
      *
      */
     virtual unsigned int &getZIndex() noexcept = 0;
-
-    /**
-     * @brief Get texture properties
-     *
-     */
-    virtual TextureProps &getTextureProps() noexcept = 0;
 
     /**
      * @brief On click event handler for the entity
