@@ -32,8 +32,10 @@ namespace shared::games::components {
     } TextFontProps;
 
     typedef struct {
+        std::string content;                // Content of the text
         TextAlign align;                    // Alignment of the text
         TextVerticalAlign verticalAlign;    // Vertical alignment of the text
+        TextFontProps font;                 // Font of the text
         types::Color color;                 // Color of the text
     } TextProps;
 }
