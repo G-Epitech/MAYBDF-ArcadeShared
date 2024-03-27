@@ -10,11 +10,16 @@
 namespace shared::types
 {
     typedef struct ColorType {
-        ColorType(u_char r, u_char g, u_char b, u_char a) : r(r), g(g), b(b), a(a) {}
+        ColorType(
+            unsigned char r,
+            unsigned char g,
+            unsigned char b,
+            unsigned char a
+        ) : r(r), g(g), b(b), a(a) {}
 
-        u_char r;
-        u_char g;
-        u_char b;
-        u_char a;
+        unsigned char r;
+        unsigned char g;
+        unsigned char b;
+        unsigned char a;
     } Color;
 }
