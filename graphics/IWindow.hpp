@@ -100,14 +100,14 @@ class shared::graphics::IWindow {
      *
      * @param props Properties of the entity & texture to render
      */
-    virtual void renderTexture(const TextureProps &props) = 0;
+    virtual void render(const TextureProps &props) = 0;
 
     /**
      * @brief Render the text of entity with given properties
      *
      * @param props Properties of the entity & text to render
      */
-    virtual void renderText(const TextProps &props) = 0;
+    virtual void render(const TextProps &props) = 0;
 
     /**
      * @brief Clear the content of the window

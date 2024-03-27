@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2024
-** arcade-shared [WSL: Ubuntu-22.04]
+** arcade-shared
 ** File description:
 ** ITextureComponent
 */
