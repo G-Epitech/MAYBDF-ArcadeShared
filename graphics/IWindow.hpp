@@ -106,7 +106,7 @@ class shared::graphics::IWindow {
      *
      * @return Icon object of the window
      */
-    virtual const std::string &getIcon(void) const = 0;
+    virtual const std::string getIcon(void) const = 0;
 
     /**
      * @brief Render the entity with given properties
