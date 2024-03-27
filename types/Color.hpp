@@ -9,14 +9,14 @@
 
 namespace shared::types
 {
-    typedef unsigned char Primary;
+    typedef unsigned char u_char;
 
-    typedef struct Color_s {
-        Color_s(Primary r, Primary g, Primary b, Primary a) : r(r), g(g), b(b), a(a) {}
+    typedef struct ColorType {
+        ColorType(u_char r, u_char g, u_char b, u_char a) : r(r), g(g), b(b), a(a) {}
 
-        Primary r;
-        Primary g;
-        Primary b;
-        Primary a;
+        u_char r;
+        u_char g;
+        u_char b;
+        u_char a;
     } Color;
 }
