@@ -46,13 +46,6 @@ class shared::graphics::IWindow {
     virtual void setTitle(const std::string &title) = 0;
 
     /**
-     * @brief Get the title of current window
-     *
-     * @return Title of the window
-     */
-    virtual std::string getTitle() const = 0;
-
-    /**
      * @brief Set the size of the window
      *
      * @param size Size of the window
@@ -100,13 +93,6 @@ class shared::graphics::IWindow {
      * @param icon Icon to use
      */
     virtual void setIcon(const std::string &icon) = 0;
-
-    /**
-     * @brief Get the icon of the window
-     *
-     * @return Icon object of the window
-     */
-    virtual const std::string &getIcon(void) const = 0;
 
     /**
      * @brief Render the entity with given properties
