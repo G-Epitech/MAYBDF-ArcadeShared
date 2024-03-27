@@ -12,7 +12,8 @@
 #include <memory>
 
 #include "events/IEvent.hpp"
-#include "types/EntityProps.hpp"
+#include "types/TextureProps.hpp"
+#include "types/TextProps.hpp"
 
 using namespace shared::types;
 
@@ -95,11 +96,18 @@ class shared::graphics::IWindow {
     virtual void setIcon(const std::string &icon) = 0;
 
     /**
-     * @brief Render the entity with given properties
+     * @brief Render the texture of entity with given properties
      *
-     * @param props Properties of the entity to render
+     * @param props Properties of the entity & texture to render
      */
-    virtual void render(const EntityProps &props) = 0;
+    virtual void render(const TextureProps &props) = 0;
+
+    /**
+     * @brief Render the text of entity with given properties
+     *
+     * @param props Properties of the entity & text to render
+     */
+    virtual void render(const TextProps &props) = 0;
 
     /**
      * @brief Clear the content of the window
