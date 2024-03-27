@@ -7,6 +7,8 @@
 
 #pragma once
 
+#include <memory>
+
 namespace shared::graphics::events
 {
   class IEvent;
