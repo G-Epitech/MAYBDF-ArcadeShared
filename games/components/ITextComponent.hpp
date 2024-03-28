@@ -15,9 +15,9 @@ namespace shared::games::components {
     class ITextComponent;
 
     typedef enum {
-        LEFT,
+        TEXT_LEFT,
         CENTER,
-        RIGHT
+        TEXT_RIGHT
     } TextAlign;
 
     typedef enum {
