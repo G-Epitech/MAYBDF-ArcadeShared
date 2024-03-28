@@ -7,13 +7,13 @@
 
 #pragma once
 
-#include <string>
+#include <exception>
 
 namespace shared::graphics::exceptions {
     class IGraphicsException;
 }
 
-class shared::graphics::exceptions::IGraphicsException {
+class shared::graphics::exceptions::IGraphicsException: public std::exception {
 public:
     virtual ~IGraphicsException() = default;
 
@@ -21,11 +21,11 @@ public:
      * @brief Get error details
      * @return String containing error details
      */
-    virtual const std::string &what() const noexcept = 0;
+    virtual const char *what() const noexcept = 0;
 
     /**
      * @brief Get error location
      * @return String containing error location
      */
-    virtual const std::string &where() const noexcept = 0;
+    virtual const char *where() const noexcept = 0;
 };
