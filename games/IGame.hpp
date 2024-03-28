@@ -8,6 +8,7 @@
 #pragma once
 
 #include <memory>
+#include <chrono>
 #include "IEntity.hpp"
 #include "../types/Vector.hpp"
 #include "types/GameManifest.hpp"
