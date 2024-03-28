@@ -15,8 +15,6 @@ namespace shared::graphics::exceptions {
 
 class shared::graphics::exceptions::IGraphicsException: public std::exception {
 public:
-    virtual ~IGraphicsException() override = default;
-
     /**
      * @brief Get error location
      * @return String containing error location
