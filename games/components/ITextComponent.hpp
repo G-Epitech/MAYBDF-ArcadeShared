@@ -10,6 +10,7 @@
 #include "IDisplayableComponent.hpp"
 #include "../../types/Vector.hpp"
 #include "../../types/Color.hpp"
+#include "../../types/Text.hpp"
 
 namespace shared::games::components {
     class ITextComponent;
@@ -17,17 +18,6 @@ namespace shared::games::components {
 
 class shared::games::components::ITextComponent : public virtual IDisplayableComponent {
 public:
-    typedef enum {
-        LEFT,
-        CENTER,
-        RIGHT
-    } TextAlign;
-
-    typedef enum {
-        BOTTOM,
-        MIDDLE,
-        TOP
-    } TextVerticalAlign;
 
     typedef struct {
         std::string path;       // Path of the font

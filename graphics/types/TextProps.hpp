@@ -13,21 +13,11 @@
 #include "../IFont.hpp"
 #include "../../types/Vector.hpp"
 #include "../../types/Color.hpp"
+#include "../../types/Text.hpp"
 
 using namespace shared::types;
 
 namespace shared::graphics {
-    typedef enum {
-        LEFT,
-        CENTER,
-        RIGHT
-    } TextAlign;
-
-    typedef enum {
-        BOTTOM,
-        MIDDLE,
-        TOP
-    } TextVerticalAlign;
 
     typedef struct {
         std::shared_ptr<IFont> font;        // Font of the text
