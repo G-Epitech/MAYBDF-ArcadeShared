@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "IPositionableComponent.hpp"
+#include "IPositionComponent.hpp"
 #include "../IGame.hpp"
 #include "../../types/Vector.hpp"
 
@@ -15,9 +15,15 @@ namespace shared::games::components {
     class IDisplayableComponent;
 }
 
-class shared::games::components::IDisplayableComponent : public virtual IPositionableComponent {
+class shared::games::components::IDisplayableComponent : public virtual IPositionComponent {
 public:
     virtual ~IDisplayableComponent() = default;
+
+    /**
+     * @brief Get size of the entity (tiles)
+     *
+     */
+    virtual Vector2u &getSize() noexcept = 0;
 
     /**
      * @brief Get Z index that is usefull for display prioroty
