@@ -8,14 +8,14 @@
 #pragma once
 
 #include "../IGame.hpp"
-#include "IPositionComponent.hpp"
+#include "ISpatialComponent.hpp"
 #include "../../types/Vector.hpp"
 
 namespace shared::games::components {
   class ICollidableComponent;
 }
 
-class shared::games::components::ICollidableComponent: public virtual IPositionComponent
+class shared::games::components::ICollidableComponent: public virtual ISpatialComponent
 {
 public:
   virtual ~ICollidableComponent() = default;
