@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2024
 ** arcade-shared
 ** File description:
-** ISpatialComponent
+** IPositionableComponent
 */
 
 #pragma once
@@ -11,13 +11,13 @@
 #include "../../types/Vector.hpp"
 
 namespace shared::games::components {
-  class ISpatialComponent;
+  class IPositionableComponent;
 }
 
-class shared::games::components::ISpatialComponent: public virtual IComponent
+class shared::games::components::IPositionableComponent: public virtual IComponent
 {
   public:
-    virtual ~ISpatialComponent() = default;
+    virtual ~IPositionableComponent() = default;
 
     /**
      * @brief Get position of the entity (tiles)

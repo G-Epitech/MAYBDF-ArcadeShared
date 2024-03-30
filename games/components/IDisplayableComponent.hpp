@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "ISpatialComponent.hpp"
+#include "IPositionableComponent.hpp"
 #include "../IGame.hpp"
 #include "../../types/Vector.hpp"
 
@@ -15,7 +15,7 @@ namespace shared::games::components {
     class IDisplayableComponent;
 }
 
-class shared::games::components::IDisplayableComponent : public virtual ISpatialComponent {
+class shared::games::components::IDisplayableComponent : public virtual IPositionableComponent {
 public:
     virtual ~IDisplayableComponent() = default;
 
