@@ -16,7 +16,7 @@ namespace shared::games::components {
       DISPLAYABLE,
       SOUND,
       COLLIDABLE,
-      SPATIAL,
+      POSITIONABLE,
       KEYBOARD
     } ComponentType;
 
