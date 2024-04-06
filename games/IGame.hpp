@@ -59,17 +59,17 @@ public:
      */
     virtual const unsigned int getFps() const noexcept = 0;
 
-  /**
-   * @brief Get map of entities
-   *
-   * @return Entities map of the game
-   */
-  virtual const entity::EntitiesMap &getEntities(void) const = 0;
+    /**
+     * @brief Get map of entities
+     *
+     * @return Entities map of the game
+     */
+    virtual const entity::EntitiesMap &getEntities(void) const = 0;
 
-  /**
-   * @brief Get the score of the game
-   *
-   * @return The score of the game
-   */
-  virtual const int getScore() const noexcept = 0;
+    /**
+     * @brief Get the score of the game
+     *
+     * @return The score of the game
+     */
+    virtual const int getScore() const noexcept = 0;
 };

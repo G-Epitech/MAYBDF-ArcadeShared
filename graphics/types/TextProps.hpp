@@ -55,6 +55,6 @@ namespace shared::graphics {
         /// @brief Size of the entity
         Vector2u size;
         /// @brief Position of the entity
-        Vector2i position;
+        Vector2f position;
     } TextProps;
 }
